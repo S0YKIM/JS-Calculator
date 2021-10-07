@@ -19,13 +19,13 @@ function App() {
       const content = target.innerText;
   
       if (target.matches('button')) {
-        if (info === ('number' || 'number__zero')) {
-          if (display.innerText.length > 9) return;
+        if (info === 'number' || info === 'number__zero') {
           if (display.innerText === '0') {
             display.innerText = content;
             calculate.current = Number(display.innerText);
           }
           else if (display.innerText !== '0' && (Number(calculate.previousKey)) || (calculate.previousKey === '.')) {
+            if (display.innerText.length > 9) return;
             display.innerText += content;
             calculate.current = Number(display.innerText);
           }
