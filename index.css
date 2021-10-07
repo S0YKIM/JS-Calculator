@@ -90,7 +90,3 @@ body {
 .button__row > .number__zero {
   width: 48%;
 }
-
-.button__row > .isPressed {
-  background-color: #00da75;
-}
