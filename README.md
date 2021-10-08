@@ -16,8 +16,8 @@ A calculator app mimicked default calculator of iphone
 
 ## TODO LIST
 
-- C(CE) 기능: 마지막 연산의 숫자를 지우기 (`3+1` → `3+`)
-- '=' 두 번 이상 클릭할 시에 이전 연산 반복 기능
+- [x] C(CE) 기능: 마지막 연산의 숫자를 지우기 (`3+1` → `3+`)
+- [x] '=' 두 번 이상 클릭할 시에 이전 연산 반복 기능
 
 ## LESSONS LEARNED
 
