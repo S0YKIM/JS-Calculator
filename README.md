@@ -1,5 +1,5 @@
 ## PREVIEW
-![preview](./image/vanilla_js_counter.png)
+![preview](./image/calculator_preview.png)
 
 ## CALCULATOR
 A calculator app mimicked default calculator of iphone
