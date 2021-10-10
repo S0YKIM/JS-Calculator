@@ -13,11 +13,17 @@ function App() {
   const calculate = new Calculate();
 
   const handleNumber = (content) => {
-    if (display.innerText === '0') {
+    if (display.innerText === '0' && content === '.') {
+      display.innerText += content;
+    }
+    else if (display.innerText === '0') {
       display.innerText = content;
       calculate.current = Number(display.innerText);
     }
-    else if (display.innerText !== '0' && (Number(calculate.previousKey)) || (calculate.previousKey === '.')) {
+    else if (display.innerText.includes('.') && content === '.') {
+      return;
+    }
+    else if (Number(calculate.previousKey) || calculate.previousKey === '.') {
       if (display.innerText.length > 14) return;
       display.innerText += content;
       calculate.current = Number(display.innerText);
@@ -51,7 +57,7 @@ function App() {
     display.innerText = calculate.current;
   }
 
-  const handlePercentage = () => {
+  const handlePercentage = (content) => {
     calculate.current /= 100;
     display.innerText = calculate.current;
     calculate.previous = calculate.current;
@@ -87,7 +93,7 @@ function App() {
           break;
 
         case 'percentage':
-          handlePercentage();
+          handlePercentage(content);
           break;
 
         default:
