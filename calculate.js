@@ -22,38 +22,22 @@ class Calculate {
     this._current = value;
   }
 
-  plus() {
-    this._current = this._previous + this._current;
-  }
-
-  minus() {
-    this._current = this._previous - this._current;
-  }
-
-  multiply() {
-    this._current = this._previous * this._current;
-  }
-
-  divide() {
-    this._current = this._previous / this._current;
-  }
-
   run() {
     switch (this.previousOperator) {
       case '+':
-        this.plus();
+        this._current = this._previous + this._current;
         break;
   
       case '-':
-        this.minus();
+        this._current = this._previous - this._current;
         break;
   
       case 'x':
-        this.multiply();
+        this._current = this._previous * this._current;
         break;
   
       case '/':
-        this.divide();
+        this._current = this._previous / this._current;
         break;
   
       case '=':

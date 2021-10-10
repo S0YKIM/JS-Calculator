@@ -4,10 +4,9 @@ import Calculate from './calculate.js';
 
 const $ = (selector) => document.querySelector(selector);
 
-const calculator = $('.calculator');
 const display = $('.calculator__display');
 const buttons = $('.calculator__buttons');
-const operator = $('.operator')
+const clear = $('.clear');
 
 function App() {
   const calculate = new Calculate();
@@ -18,38 +17,48 @@ function App() {
     }
     else if (display.innerText === '0') {
       display.innerText = content;
-      calculate.current = Number(display.innerText);
     }
     else if (display.innerText.includes('.') && content === '.') {
       return;
     }
     else if (Number(calculate.previousKey) || calculate.previousKey === '.') {
-      if (display.innerText.length > 14) return;
+      if (display.innerText.length > 8) return;
       display.innerText += content;
-      calculate.current = Number(display.innerText);
     }
     else {
       display.innerText = content;
-      calculate.current = Number(display.innerText);
     }
+    calculate.current = Number(display.innerText);
     calculate.previousKey = content;
+    clear.innerText = 'C';
   }
 
   const handleOperator = (content) => {
     if (Number(calculate.previousKey) || calculate.previousKey === '.')
-        calculate.run();
-      display.innerText = calculate.current;
-      calculate.previous = calculate.current;
-      calculate.previousOperator = content;
-      calculate.previousKey = content;
+      calculate.run();
+    display.innerText = calculate.current;
+    calculate.previous = calculate.current;
+    calculate.previousOperator = content;
+    calculate.previousKey = content;
+  }
+
+  const handleAllClear = () => {
+    if (clear.innerText === 'AC') {
+      calculate.previous = 0;
+      calculate.current = 0;
+      calculate.previousOperator = '';
+      calculate.previousKey = '';
+      display.innerText = 0;
+    }
   }
 
   const handleClear = () => {
-    calculate.previous = 0;
-    calculate.current = 0;
-    calculate.previousOperator = '';
-    calculate.previousKey = '';
-    display.innerText = 0;
+    if (clear.innerText === 'C') {
+      calculate.current = 0;
+      calculate.previousKey = '';
+      display.innerText = 0;
+      clear.innerText = 'AC';
+    }
   }
 
   const handleSign = () => {
@@ -85,6 +94,7 @@ function App() {
           break;
 
         case 'clear':
+          handleAllClear();
           handleClear();
           break;
 
