@@ -16,7 +16,7 @@ function App() {
     if (display.innerText === '0' && content === '.') {
       display.innerText += content;
     }
-    /* 처음 0 인 상태에서 숫자 입력 */
+    /* 처음 숫자 입력 */
     else if (display.innerText === '0') {
       display.innerText = content;
     }
@@ -24,12 +24,12 @@ function App() {
     else if (display.innerText.includes('.') && content === '.') {
       return;
     }
-    /* 숫자나 . 뒤에 숫자 추가 */
+    /* 숫자나 . 뒤 숫자 입력 */
     else if (calculate.previousKey >= 0 || calculate.previousKey <= 9 || calculate.previousKey === '.') {
       if (display.innerText.length > 8) return;
       display.innerText += content;
     }
-    /* 연산자 버튼 누른 후에 숫자 누르기 */
+    /* 연산자 누른 후 숫자 입력 */
     else {
       display.innerText = content;
     }

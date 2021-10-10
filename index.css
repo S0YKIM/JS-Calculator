@@ -58,6 +58,21 @@ body {
   color: white;
 }
 
+.clear__sign__percentage > .operator {
+  color: white;
+  background-color: #ffae43;
+}
+
+.clear__sign__percentage > button:active {
+  background-color: rgba(255, 255, 255, 0.726);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+.clear__sign__percentage > .operator:active {
+  background-color: rgb(255, 218, 115);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
 .button__row {
   text-align: center;
   height: 100px;
@@ -77,14 +92,19 @@ body {
   color: white;
 }
 
-.clear__sign__percentage > .operator {
-  color: white;
-  background-color: #ffae43;
+.button__row > button:active {
+  background-color: rgba(255, 255, 255, 0.726);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.1) inset;
 }
 
 .button__row > .operator {
   color: white;
   background-color: #ffae43;
+}
+
+.button__row > .operator:active {
+  background-color: rgb(255, 218, 115);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.1) inset;
 }
 
 .button__row > .number__zero {
