@@ -12,19 +12,24 @@ function App() {
   const calculate = new Calculate();
 
   const handleNumber = (content) => {
+    /* 0.xxx */
     if (display.innerText === '0' && content === '.') {
       display.innerText += content;
     }
+    /* 처음 0 인 상태에서 숫자 입력 */
     else if (display.innerText === '0') {
       display.innerText = content;
     }
+    /* 중복 . 입력 방지 */
     else if (display.innerText.includes('.') && content === '.') {
       return;
     }
-    else if (Number(calculate.previousKey) || calculate.previousKey === '.') {
+    /* 숫자나 . 뒤에 숫자 추가 */
+    else if (calculate.previousKey >= 0 || calculate.previousKey <= 9 || calculate.previousKey === '.') {
       if (display.innerText.length > 8) return;
       display.innerText += content;
     }
+    /* 연산자 버튼 누른 후에 숫자 누르기 */
     else {
       display.innerText = content;
     }
