@@ -14,11 +14,15 @@ A calculator app mimicked iphone's default calculator
 - [x] AC 기능: 0 으로 초기화
 - [x] 연산자를 클릭할 때마다 결과 업데이트
 
+</br>
+
 ## VERSION 2.0
 - [x] C(CE) 기능: 마지막 연산의 숫자를 지우기 (`3+1` → `3+`)
 - [x] `.` 을 여러 번 누르면 계속 추가되는 현상 해결
 - [x] 처음부터 `.` 과 숫자를 입력하면 `.xxx` 가 되는 현상 해결
 - [x] `0`을 여러 번 입력하면 다시 `0`으로 초기화되는 현상 해결
+
+</br>
 
 ## LESSONS LEARNED
 
