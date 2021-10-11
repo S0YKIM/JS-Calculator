@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "serif";
+  height: 100vh;
+  width: 100vw;
+  color: #473b41;
+}
+
+.calculator {
+  width: 350px;
+  height: 502px;
+  background-color: rgb(44, 42, 42);
+}
+
+.calculator__display {
+  height: 70px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 30px;
+  text-align: right;
+  font-family: "cursive";
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 20px 0px;
+  margin: 12px -20px;
+  color: white;
+}
+
+.calculator__buttons {
+  width: 100%;
+  height: 100%;
+}
+
+.clear__sign__percentage {
+  text-align: center;
+  height: 100px;
+  margin: -20px 0px;
+}
+
+.clear__sign__percentage > button {
+  width: 23.5%;
+  height: 75px;
+  margin: -1px;
+  font-size: 30px;
+  font-family: "cursive";
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #52514d;
+  color: white;
+}
+
+.clear__sign__percentage > .operator {
+  color: white;
+  background-color: #ffae43;
+}
+
+.clear__sign__percentage > button:active {
+  background-color: rgba(255, 255, 255, 0.726);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+.clear__sign__percentage > .operator:active {
+  background-color: rgb(255, 218, 115);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+.button__row {
+  text-align: center;
+  height: 100px;
+  margin: -20px 0px;
+}
+
+.button__row > button {
+  width: 23.5%;
+  height: 75px;
+  margin: -1px;
+  font-size: 30px;
+  font-family: "cursive";
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #777672;
+  color: white;
+}
+
+.button__row > button:active {
+  background-color: rgba(255, 255, 255, 0.726);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+.button__row > .operator {
+  color: white;
+  background-color: #ffae43;
+}
+
+.button__row > .operator:active {
+  background-color: rgb(255, 218, 115);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+.button__row > .number__zero {
+  width: 48%;
+}
