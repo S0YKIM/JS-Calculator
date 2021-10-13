@@ -2,7 +2,7 @@
 ![preview](./image/calculator_preview.png)
 
 ## CALCULATOR
-A calculator app mimicked iphone's default calculator
+A calculator app mimicked iphone's calculator in Vanilla Javascript
 
 </br>
 
